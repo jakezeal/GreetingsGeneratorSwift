@@ -9,7 +9,33 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
+    
+    enum Buttons: String {
+        case hello = "Hello"
+        case hi = "Hi"
+        case hey = "Hey"
+        case whaddup = "Whaddup"
+    }
+    
+    enum State: Int {
+        case custom
+        case predefined
+    }
+    
+    var state: State = .predefined {
+        didSet {
+            switch state {
+            case .predefined:
+                setPredefinedStateInView()
+            case .custom:
+                setCustomStateInView()
+            }
+        }
+    }
+    
+    var greetingText: String?
+    var nameText: String?
     
     @IBOutlet weak var stateSegmentedControl: UISegmentedControl!
     @IBOutlet weak var greetingsLabel: UILabel!
@@ -19,15 +45,62 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setPredefinedStateInView()
+        greetingText = Buttons.hello.rawValue
+        nameText = nameTextField.text ?? ""
+        setGreetingsLabelText()
     }
     
     @IBAction func stateChanged(_ sender: UISegmentedControl) {
         
+        switch stateSegmentedControl.selectedSegmentIndex {
+        case 0:
+            state = .predefined
+        case 1:
+            state = .custom
+        default:
+            print("Default")
+            break
+        }
+    
     }
     
     @IBAction func greetingsButtonPressed(_ sender: UIButton) {
         
+        greetingText = sender.titleLabel?.text
+        setGreetingsLabelText()
+    }
+    
+    
+    //TODO: Replace with Target-action
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        greetingText = greetingsTextField.text
+        nameText = nameTextField.text
+        
+        setGreetingsLabelText()
+        
+        return true
+    }
+    
+    func setPredefinedStateInView() {
+        for button in greetingButtons {
+            button.isEnabled = true
+        }
+        
+        greetingsTextField.isEnabled = false
+    }
+    
+    func setCustomStateInView() {
+        for button in greetingButtons {
+            button.isEnabled = false
+        }
+        
+        greetingsTextField.isEnabled = true
+    }
+    
+    func setGreetingsLabelText() {
+        greetingsLabel.text = (greetingText ?? "") + " " + (nameText ?? "")
     }
     
 }
