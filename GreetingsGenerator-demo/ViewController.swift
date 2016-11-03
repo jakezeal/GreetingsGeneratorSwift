@@ -53,6 +53,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         greetingText = Buttons.hello.rawValue
         nameText = nameTextField.text ?? ""
         setGreetingsLabelText()
+        
+        greetingsTextField.addTarget(self, action: #selector(greetingTextFieldDidChange), for: .allEditingEvents)
+        
+        nameTextField.addTarget(self, action: #selector(nameTextFieldDidChange), for: .allEditingEvents)
     }
     
     // MARK: - IBActions
@@ -76,19 +80,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
         setGreetingsLabelText()
     }
     
-    // MARK: - Text Field Delegates
-    //TODO: Replace with Target-action
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
+    // MARK: - Helper Methods
+    
+    func greetingTextFieldDidChange() {
         greetingText = greetingsTextField.text
-        nameText = nameTextField.text
-        
         setGreetingsLabelText()
-        
-        return true
     }
     
-    // MARK: - Helper Methods
+    func nameTextFieldDidChange() {
+        nameText = nameTextField.text
+        setGreetingsLabelText()
+    }
+    
+    func setGreetingsLabelText() {
+        greetingsLabel.text = (greetingText ?? "") + " " + (nameText ?? "")
+    }
+    
     func setPredefinedStateInView() {
         for button in greetingButtons {
             button.isEnabled = true
@@ -103,10 +110,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         
         greetingsTextField.isEnabled = true
-    }
-    
-    func setGreetingsLabelText() {
-        greetingsLabel.text = (greetingText ?? "") + " " + (nameText ?? "")
     }
     
 }
