@@ -11,6 +11,7 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
+    // MARK: - Enums
     enum Buttons: String {
         case hello = "Hello"
         case hi = "Hi"
@@ -23,6 +24,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         case predefined
     }
     
+    // MARK: - Properties
     var state: State = .predefined {
         didSet {
             switch state {
@@ -37,12 +39,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var greetingText: String?
     var nameText: String?
     
+    // MARK: - IBOutlets
     @IBOutlet weak var stateSegmentedControl: UISegmentedControl!
     @IBOutlet weak var greetingsLabel: UILabel!
     @IBOutlet weak var greetingsTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet var greetingButtons: [UIButton]!
     
+    // MARK: - View Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
         setPredefinedStateInView()
@@ -51,6 +55,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         setGreetingsLabelText()
     }
     
+    // MARK: - IBActions
     @IBAction func stateChanged(_ sender: UISegmentedControl) {
         
         switch stateSegmentedControl.selectedSegmentIndex {
@@ -71,7 +76,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         setGreetingsLabelText()
     }
     
-    
+    // MARK: - Text Field Delegates
     //TODO: Replace with Target-action
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
@@ -83,6 +88,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    // MARK: - Helper Methods
     func setPredefinedStateInView() {
         for button in greetingButtons {
             button.isEnabled = true
