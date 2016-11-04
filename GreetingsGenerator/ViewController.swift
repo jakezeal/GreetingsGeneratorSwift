@@ -49,12 +49,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setPredefinedStateInView()
+        prepareGreetingsLabel()
+        prepareGreetingsTextFieldTargetAction()
+        prepareNameTextFieldTargetAction()
+    }
+    
+    // MARK: - Preparations
+    func prepareGreetingsLabel() {
         greetingText = Buttons.hello.rawValue
         nameText = nameTextField.text ?? ""
         setGreetingsLabelText()
-        
+    }
+    
+    func prepareGreetingsTextFieldTargetAction() {
         greetingsTextField.addTarget(self, action: #selector(textFieldDidChange), for: .allEditingEvents)
-        
+    }
+    
+    func prepareNameTextFieldTargetAction() {
         nameTextField.addTarget(self, action: #selector(textFieldDidChange), for: .allEditingEvents)
     }
     
