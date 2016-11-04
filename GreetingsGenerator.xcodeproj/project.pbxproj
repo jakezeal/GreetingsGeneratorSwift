@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		559D755F1DCB94790005947A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559D755E1DCB94790005947A /* AppDelegate.swift */; };
-		559D75611DCB94790005947A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559D75601DCB94790005947A /* ViewController.swift */; };
-		559D75661DCB94790005947A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 559D75651DCB94790005947A /* Assets.xcassets */; };
-		559D75691DCB94790005947A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 559D75671DCB94790005947A /* LaunchScreen.storyboard */; };
-		559D75711DCB94910005947A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 559D75701DCB94910005947A /* Main.storyboard */; };
+		E2B3A5781DCCFE1500191107 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B3A5771DCCFE1500191107 /* AppDelegate.swift */; };
+		E2B3A57A1DCCFE1500191107 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B3A5791DCCFE1500191107 /* ViewController.swift */; };
+		E2B3A57F1DCCFE1500191107 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2B3A57E1DCCFE1500191107 /* Assets.xcassets */; };
+		E2B3A5821DCCFE1500191107 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2B3A5801DCCFE1500191107 /* LaunchScreen.storyboard */; };
+		E2B3A58A1DCCFEA800191107 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2B3A5891DCCFEA800191107 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		559D755B1DCB94790005947A /* GreetingsGenerator-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GreetingsGenerator-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		559D755E1DCB94790005947A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		559D75601DCB94790005947A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		559D75651DCB94790005947A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		559D75681DCB94790005947A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		559D756A1DCB94790005947A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		559D75701DCB94910005947A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E2B3A5741DCCFE1500191107 /* GreetingsGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreetingsGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2B3A5771DCCFE1500191107 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E2B3A5791DCCFE1500191107 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E2B3A57E1DCCFE1500191107 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2B3A5811DCCFE1500191107 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E2B3A5831DCCFE1500191107 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2B3A5891DCCFEA800191107 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		559D75581DCB94790005947A /* Frameworks */ = {
+		E2B3A5711DCCFE1500191107 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,72 +35,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		559D75521DCB94790005947A = {
+		E2B3A56B1DCCFE1500191107 = {
 			isa = PBXGroup;
 			children = (
-				559D755D1DCB94790005947A /* GreetingsGenerator-demo */,
-				559D755C1DCB94790005947A /* Products */,
+				E2B3A5761DCCFE1500191107 /* GreetingsGenerator */,
+				E2B3A5751DCCFE1500191107 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		559D755C1DCB94790005947A /* Products */ = {
+		E2B3A5751DCCFE1500191107 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				559D755B1DCB94790005947A /* GreetingsGenerator-demo.app */,
+				E2B3A5741DCCFE1500191107 /* GreetingsGenerator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		559D755D1DCB94790005947A /* GreetingsGenerator-demo */ = {
+		E2B3A5761DCCFE1500191107 /* GreetingsGenerator */ = {
 			isa = PBXGroup;
 			children = (
-				559D755E1DCB94790005947A /* AppDelegate.swift */,
-				559D75601DCB94790005947A /* ViewController.swift */,
-				559D75701DCB94910005947A /* Main.storyboard */,
-				559D75651DCB94790005947A /* Assets.xcassets */,
-				559D75671DCB94790005947A /* LaunchScreen.storyboard */,
-				559D756A1DCB94790005947A /* Info.plist */,
+				E2B3A5771DCCFE1500191107 /* AppDelegate.swift */,
+				E2B3A5791DCCFE1500191107 /* ViewController.swift */,
+				E2B3A57E1DCCFE1500191107 /* Assets.xcassets */,
+				E2B3A5891DCCFEA800191107 /* Main.storyboard */,
+				E2B3A5801DCCFE1500191107 /* LaunchScreen.storyboard */,
+				E2B3A5831DCCFE1500191107 /* Info.plist */,
 			);
-			path = "GreetingsGenerator-demo";
+			path = GreetingsGenerator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		559D755A1DCB94790005947A /* GreetingsGenerator-demo */ = {
+		E2B3A5731DCCFE1500191107 /* GreetingsGenerator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 559D756D1DCB94790005947A /* Build configuration list for PBXNativeTarget "GreetingsGenerator-demo" */;
+			buildConfigurationList = E2B3A5861DCCFE1500191107 /* Build configuration list for PBXNativeTarget "GreetingsGenerator" */;
 			buildPhases = (
-				559D75571DCB94790005947A /* Sources */,
-				559D75581DCB94790005947A /* Frameworks */,
-				559D75591DCB94790005947A /* Resources */,
+				E2B3A5701DCCFE1500191107 /* Sources */,
+				E2B3A5711DCCFE1500191107 /* Frameworks */,
+				E2B3A5721DCCFE1500191107 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "GreetingsGenerator-demo";
-			productName = "GreetingsGenerator-demo";
-			productReference = 559D755B1DCB94790005947A /* GreetingsGenerator-demo.app */;
+			name = GreetingsGenerator;
+			productName = GreetingsGenerator;
+			productReference = E2B3A5741DCCFE1500191107 /* GreetingsGenerator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		559D75531DCB94790005947A /* Project object */ = {
+		E2B3A56C1DCCFE1500191107 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = "Nikolas Burk";
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = Jake;
 				TargetAttributes = {
-					559D755A1DCB94790005947A = {
-						CreatedOnToolsVersion = 8.0;
+					E2B3A5731DCCFE1500191107 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = MPF357W934;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 559D75561DCB94790005947A /* Build configuration list for PBXProject "GreetingsGenerator-demo" */;
+			buildConfigurationList = E2B3A56F1DCCFE1500191107 /* Build configuration list for PBXProject "GreetingsGenerator" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -108,46 +109,46 @@
 				en,
 				Base,
 			);
-			mainGroup = 559D75521DCB94790005947A;
-			productRefGroup = 559D755C1DCB94790005947A /* Products */;
+			mainGroup = E2B3A56B1DCCFE1500191107;
+			productRefGroup = E2B3A5751DCCFE1500191107 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				559D755A1DCB94790005947A /* GreetingsGenerator-demo */,
+				E2B3A5731DCCFE1500191107 /* GreetingsGenerator */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		559D75591DCB94790005947A /* Resources */ = {
+		E2B3A5721DCCFE1500191107 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				559D75711DCB94910005947A /* Main.storyboard in Resources */,
-				559D75691DCB94790005947A /* LaunchScreen.storyboard in Resources */,
-				559D75661DCB94790005947A /* Assets.xcassets in Resources */,
+				E2B3A58A1DCCFEA800191107 /* Main.storyboard in Resources */,
+				E2B3A5821DCCFE1500191107 /* LaunchScreen.storyboard in Resources */,
+				E2B3A57F1DCCFE1500191107 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		559D75571DCB94790005947A /* Sources */ = {
+		E2B3A5701DCCFE1500191107 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				559D75611DCB94790005947A /* ViewController.swift in Sources */,
-				559D755F1DCB94790005947A /* AppDelegate.swift in Sources */,
+				E2B3A57A1DCCFE1500191107 /* ViewController.swift in Sources */,
+				E2B3A5781DCCFE1500191107 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		559D75671DCB94790005947A /* LaunchScreen.storyboard */ = {
+		E2B3A5801DCCFE1500191107 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				559D75681DCB94790005947A /* Base */,
+				E2B3A5811DCCFE1500191107 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -155,7 +156,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		559D756B1DCB94790005947A /* Debug */ = {
+		E2B3A5841DCCFE1500191107 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -195,7 +196,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -204,7 +205,7 @@
 			};
 			name = Debug;
 		};
-		559D756C1DCB94790005947A /* Release */ = {
+		E2B3A5851DCCFE1500191107 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -238,7 +239,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -246,25 +247,27 @@
 			};
 			name = Release;
 		};
-		559D756E1DCB94790005947A /* Debug */ = {
+		E2B3A5871DCCFE1500191107 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "GreetingsGenerator-demo/Info.plist";
+				DEVELOPMENT_TEAM = MPF357W934;
+				INFOPLIST_FILE = GreetingsGenerator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.makeschool.nikolasburk.GreetingsGenerator-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakezeal.GreetingsGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		559D756F1DCB94790005947A /* Release */ = {
+		E2B3A5881DCCFE1500191107 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "GreetingsGenerator-demo/Info.plist";
+				DEVELOPMENT_TEAM = MPF357W934;
+				INFOPLIST_FILE = GreetingsGenerator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.makeschool.nikolasburk.GreetingsGenerator-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakezeal.GreetingsGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -273,24 +276,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		559D75561DCB94790005947A /* Build configuration list for PBXProject "GreetingsGenerator-demo" */ = {
+		E2B3A56F1DCCFE1500191107 /* Build configuration list for PBXProject "GreetingsGenerator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				559D756B1DCB94790005947A /* Debug */,
-				559D756C1DCB94790005947A /* Release */,
+				E2B3A5841DCCFE1500191107 /* Debug */,
+				E2B3A5851DCCFE1500191107 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		559D756D1DCB94790005947A /* Build configuration list for PBXNativeTarget "GreetingsGenerator-demo" */ = {
+		E2B3A5861DCCFE1500191107 /* Build configuration list for PBXNativeTarget "GreetingsGenerator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				559D756E1DCB94790005947A /* Debug */,
-				559D756F1DCB94790005947A /* Release */,
+				E2B3A5871DCCFE1500191107 /* Debug */,
+				E2B3A5881DCCFE1500191107 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 559D75531DCB94790005947A /* Project object */;
+	rootObject = E2B3A56C1DCCFE1500191107 /* Project object */;
 }

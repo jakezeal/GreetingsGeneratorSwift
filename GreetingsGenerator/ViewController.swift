@@ -1,10 +1,9 @@
-
 //
 //  ViewController.swift
-//  DataBindings-demo
+//  GreetingsGenerator
 //
-//  Created by Nikolas Burk on 02/11/16.
-//  Copyright © 2016 Nikolas Burk. All rights reserved.
+//  Created by Jake Zeal on 03/11/16.
+//  Copyright © 2016 Jake. All rights reserved.
 //
 
 import UIKit

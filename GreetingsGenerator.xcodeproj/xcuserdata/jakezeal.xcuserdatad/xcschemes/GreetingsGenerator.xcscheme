@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "559D755A1DCB94790005947A"
-               BuildableName = "GreetingsGenerator-demo.app"
-               BlueprintName = "GreetingsGenerator-demo"
-               ReferencedContainer = "container:GreetingsGenerator-demo.xcodeproj">
+               BlueprintIdentifier = "E2B3A5731DCCFE1500191107"
+               BuildableName = "GreetingsGenerator.app"
+               BlueprintName = "GreetingsGenerator"
+               ReferencedContainer = "container:GreetingsGenerator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "559D755A1DCB94790005947A"
-            BuildableName = "GreetingsGenerator-demo.app"
-            BlueprintName = "GreetingsGenerator-demo"
-            ReferencedContainer = "container:GreetingsGenerator-demo.xcodeproj">
+            BlueprintIdentifier = "E2B3A5731DCCFE1500191107"
+            BuildableName = "GreetingsGenerator.app"
+            BlueprintName = "GreetingsGenerator"
+            ReferencedContainer = "container:GreetingsGenerator.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "559D755A1DCB94790005947A"
-            BuildableName = "GreetingsGenerator-demo.app"
-            BlueprintName = "GreetingsGenerator-demo"
-            ReferencedContainer = "container:GreetingsGenerator-demo.xcodeproj">
+            BlueprintIdentifier = "E2B3A5731DCCFE1500191107"
+            BuildableName = "GreetingsGenerator.app"
+            BlueprintName = "GreetingsGenerator"
+            ReferencedContainer = "container:GreetingsGenerator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "559D755A1DCB94790005947A"
-            BuildableName = "GreetingsGenerator-demo.app"
-            BlueprintName = "GreetingsGenerator-demo"
-            ReferencedContainer = "container:GreetingsGenerator-demo.xcodeproj">
+            BlueprintIdentifier = "E2B3A5731DCCFE1500191107"
+            BuildableName = "GreetingsGenerator.app"
+            BlueprintName = "GreetingsGenerator"
+            ReferencedContainer = "container:GreetingsGenerator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
