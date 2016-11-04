@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Enums
-    enum Buttons: String {
+    enum Button: String {
         case hello = "Hello"
         case hi = "Hi"
         case hey = "Hey"
@@ -20,14 +20,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     enum State: Int {
         case custom
-        case predefined
+        case button
     }
     
     // MARK: - Properties
-    var state: State = .predefined {
+    var state: State = .button {
         didSet {
             switch state {
-            case .predefined:
+            case .button:
                 setPredefinedStateInView()
             case .custom:
                 setCustomStateInView()
@@ -37,6 +37,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     var greetingText: String?
     var nameText: String?
+    
+    var lastGreetingsButtonText: String?
     
     // MARK: - IBOutlets
     @IBOutlet weak var stateSegmentedControl: UISegmentedControl!
@@ -56,7 +58,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Preparations
     func prepareGreetingsLabel() {
-        greetingText = Buttons.hello.rawValue
+        greetingText = Button.hello.rawValue
         nameText = nameTextField.text ?? ""
         setGreetingsLabelText()
     }
@@ -74,7 +76,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         switch stateSegmentedControl.selectedSegmentIndex {
         case 0:
-            state = .predefined
+            greetingText = lastGreetingsButtonText
+            state = .button
+            setGreetingsLabelText()
         case 1:
             state = .custom
         default:
@@ -85,7 +89,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func greetingsButtonPressed(_ sender: UIButton) {
-        greetingText = sender.titleLabel?.text
+        lastGreetingsButtonText = sender.titleLabel?.text
+        greetingText = lastGreetingsButtonText
         setGreetingsLabelText()
     }
     
