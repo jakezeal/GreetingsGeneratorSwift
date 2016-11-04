@@ -40,13 +40,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
             updateGreetingsLabelText()
         }
     }
+    
     var nameText: String? {
         didSet {
             updateGreetingsLabelText()
         }
     }
     
-    var lastGreetingsButtonText: String?
+    var lastGreetingsButtonString: String?
+    var lastCustomGreeting: String?
     
     // MARK: - IBOutlets
     @IBOutlet weak var stateSegmentedControl: UISegmentedControl!
@@ -59,18 +61,27 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setPredefinedStateInView()
-        prepareGreetingsLabel()
+        prepareInitialGreeting()
         prepareGreetingsTextFieldTargetAction()
         prepareNameTextFieldTargetAction()
     }
     
     // MARK: - Preparations
-    func prepareGreetingsLabel() {
-        greetingText = Button.hello.rawValue
-        lastGreetingsButtonText = greetingText
-        nameText = nameTextField.text ?? ""
+    func prepareInitialGreeting() {
+        prepareLastGreetingsStrings()
+        prepareGreetingLabels()
     }
     
+    func prepareLastGreetingsStrings() {
+        lastGreetingsButtonString = Button.hello.rawValue
+        lastCustomGreeting = greetingsTextField.text
+    }
+    
+    func prepareGreetingLabels() {
+        greetingText = lastGreetingsButtonString
+        nameText = nameTextField.text
+    }
+
     func prepareGreetingsTextFieldTargetAction() {
         greetingsTextField.addTarget(self, action: #selector(textFieldDidChange), for: .allEditingEvents)
     }
@@ -85,9 +96,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         switch stateSegmentedControl.selectedSegmentIndex {
         case 0:
             state = .predefined
-            greetingText = lastGreetingsButtonText
+            greetingText = lastGreetingsButtonString
         case 1:
             state = .custom
+            greetingText = lastCustomGreeting
         default:
             print("Default")
             break
@@ -96,14 +108,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func greetingsButtonPressed(_ sender: UIButton) {
-        lastGreetingsButtonText = sender.titleLabel?.text
-        greetingText = lastGreetingsButtonText
+        lastGreetingsButtonString = sender.titleLabel?.text
+        greetingText = lastGreetingsButtonString
     }
     
     // MARK: - Helper Methods
     func textFieldDidChange(_ sender: UITextField) {
         if sender == greetingsTextField {
             greetingText = greetingsTextField.text
+            lastCustomGreeting = greetingText
         } else if sender  == nameTextField {
             nameText = nameTextField.text
         }
