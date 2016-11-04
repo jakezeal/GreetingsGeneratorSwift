@@ -53,9 +53,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         nameText = nameTextField.text ?? ""
         setGreetingsLabelText()
         
-        greetingsTextField.addTarget(self, action: #selector(greetingTextFieldDidChange), for: .allEditingEvents)
+        greetingsTextField.addTarget(self, action: #selector(textFieldDidChange), for: .allEditingEvents)
         
-        nameTextField.addTarget(self, action: #selector(nameTextFieldDidChange), for: .allEditingEvents)
+        nameTextField.addTarget(self, action: #selector(textFieldDidChange), for: .allEditingEvents)
     }
     
     // MARK: - IBActions
@@ -74,20 +74,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func greetingsButtonPressed(_ sender: UIButton) {
-        
         greetingText = sender.titleLabel?.text
         setGreetingsLabelText()
     }
     
     // MARK: - Helper Methods
-    
-    func greetingTextFieldDidChange() {
-        greetingText = greetingsTextField.text
-        setGreetingsLabelText()
-    }
-    
-    func nameTextFieldDidChange() {
-        nameText = nameTextField.text
+    func textFieldDidChange(_ sender: UITextField) {
+        if sender == greetingsTextField {
+            greetingText = greetingsTextField.text
+        } else if sender  == nameTextField {
+            nameText = nameTextField.text
+        }
         setGreetingsLabelText()
     }
     
@@ -109,6 +106,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         
         greetingsTextField.isEnabled = true
+        
     }
     
 }
