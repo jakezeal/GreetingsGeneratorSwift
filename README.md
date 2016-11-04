@@ -1,4 +1,4 @@
-# GreetingsGenerator-demo
+# GreetingsGenerator
 
 Let's build a small, one-viewcontroller app that let's us generate and display a greeting for a person that is composed of
 
