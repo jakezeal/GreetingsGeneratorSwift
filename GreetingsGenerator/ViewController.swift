@@ -20,14 +20,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     enum State: Int {
         case custom
-        case button
+        case predefined
     }
     
     // MARK: - Properties
-    var state: State = .button {
+    var state: State = .predefined {
         didSet {
             switch state {
-            case .button:
+            case .predefined:
                 setPredefinedStateInView()
             case .custom:
                 setCustomStateInView()
@@ -35,8 +35,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    var greetingText: String?
-    var nameText: String?
+    var greetingText: String? {
+        didSet {
+            updateGreetingsLabelText()
+        }
+    }
+    var nameText: String? {
+        didSet {
+            updateGreetingsLabelText()
+        }
+    }
     
     var lastGreetingsButtonText: String?
     
@@ -59,8 +67,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Preparations
     func prepareGreetingsLabel() {
         greetingText = Button.hello.rawValue
+        lastGreetingsButtonText = greetingText
         nameText = nameTextField.text ?? ""
-        setGreetingsLabelText()
     }
     
     func prepareGreetingsTextFieldTargetAction() {
@@ -76,9 +84,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         switch stateSegmentedControl.selectedSegmentIndex {
         case 0:
+            state = .predefined
             greetingText = lastGreetingsButtonText
-            state = .button
-            setGreetingsLabelText()
         case 1:
             state = .custom
         default:
@@ -91,7 +98,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func greetingsButtonPressed(_ sender: UIButton) {
         lastGreetingsButtonText = sender.titleLabel?.text
         greetingText = lastGreetingsButtonText
-        setGreetingsLabelText()
     }
     
     // MARK: - Helper Methods
@@ -101,11 +107,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         } else if sender  == nameTextField {
             nameText = nameTextField.text
         }
-        setGreetingsLabelText()
-    }
-    
-    func setGreetingsLabelText() {
-        greetingsLabel.text = (greetingText ?? "") + " " + (nameText ?? "")
     }
     
     func setPredefinedStateInView() {
@@ -122,9 +123,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         
         greetingsTextField.isEnabled = true
-        
     }
     
+    func updateGreetingsLabelText() {
+        greetingsLabel.text = (greetingText ?? "") + " " + (nameText ?? "")
+    }
 }
 
 
